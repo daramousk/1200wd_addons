@@ -20,6 +20,7 @@
     'category': 'Sales',
     'version': '8.0.1.1.2',
     'depends': [
+        'base',
         'sale',
         'account',
     ],
