@@ -24,11 +24,4 @@ from openerp import models, fields
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    transsmart_code = fields.Char(
-        size=128,
-        string="Transsmart Code")
-    transsmart_id = fields.Integer(
-        "Transsmart ID")
-    transsmart_package_type_id = fields.Many2one(
-            'delivery.package.type',
-            string='Package Type')
+    code = fields.Char(size=128, string='Transsmart Code', readonly=1)

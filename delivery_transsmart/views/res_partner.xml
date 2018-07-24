@@ -7,7 +7,9 @@
             <field name="inherit_id" ref="base.view_partner_form" />
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='date']" position="after">
-                    <field name="transsmart_package_type_id" />
+                    <field
+                        name="code"
+                        attrs="{'invisible': [('code', '=', False)]}" />
                 </xpath>
             </field>
         </record>
